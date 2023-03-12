@@ -27,19 +27,36 @@ version = pixy2.get_version()
 print('Hardware: ', version.hardware)
 print('Firmware: ', version.firmware)
 
-# Create a loop to react to buttons
+# Get frame resolution
+resolution = pixy2.get_resolution()
+print('Frame width:  ', resolution.width)
+print('Frame height: ', resolution.height)
+
+# Turn upper leds on for 2 seconds, then turn off
+pixy2.set_lamp(1, 0)
+wait(1000)
+pixy2.set_lamp(0, 0)
+
+# Track blocks with signature 1, request just 1 block
 while True:
+
+    nr_blocks, blocks = pixy2.get_blocks(1, 1)
+
+    # Extract data of first (and only) block
+    if nr_blocks >= 1:
+
+        sig = blocks[0].sig
+        x = blocks[0].x_center
+        y = blocks[0].y_center
+        w = blocks[0].width
+        y = blocks[0].height
+
+        print(x,',',y)
 
     # Check for center button events
     if Button.CENTER in ev3.buttons.pressed():
         ev3.light.off()
         break
-
-    ev3.light.on(Color.RED)
-
-    wait(500)
-
-    ev3.light.on(Color.GREEN)
 
     wait(500)
 
