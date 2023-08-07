@@ -1,4 +1,4 @@
-# LEGO Mindstorms EV3 and a Pixy2 AI Camera
+# LEGO® Mindstorms® EV3 and a Pixy2 AI Camera
 
 A basic example of using Python with the a Pixy2 AI camera.
 
