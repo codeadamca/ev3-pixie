@@ -9,6 +9,7 @@ A basic example of using Python with the a Pixy2 AI camera.
 - [Pixy Documentation](https://docs.pixycam.com/wiki/doku.php)
 - [Python Library for Pixy](https://github.com/KWSmit/Pixy_ev3dev)
 
+<br>
 <a href="https://codeadam.ca">
-<img src="https://codeadam.ca/images/code-block.png" width="100">
+<img src="https://cdn.codeadam.ca/images@1.0.0/codeadam-logo-coloured-horizontal.png" width="200">
 </a>
